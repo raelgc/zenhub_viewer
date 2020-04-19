@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Categories=Development;ProjectManagement;
+Name=ZenHub Viewer
+GenericName=zenhub
+Comment=ZenHub Viewer is a non official desktop viewer for ZenHub
+Keywords=zenhub;development;project-management;collaboration;
+Exec=zenhub_viewer
+StartupWMClass=zenhub_viewer
+Icon=/usr/share/pixmaps/zenhub_viewer.png

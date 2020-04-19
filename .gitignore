@@ -1,0 +1,26 @@
+# Build resources
+*.build
+*.tar.gz
+*.tar.xz
+*.dsc
+*.changes
+*.upload
+
+# Python resources
+__pycache__
+*.pyc
+.pybuild
+build
+dist
+zenhub_viewer.egg-info
+
+# IDEs
+.vscode
+.idea
+.iml
+
+# Deb
+debian/files
+debian/zenhub_viewer/
+debian/zenhub_viewer.*
+debian/debhelper-build-stamp
