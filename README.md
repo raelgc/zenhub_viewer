@@ -11,6 +11,10 @@ ZenHub is a team collaboration tool build directly into GitHub.
 - Python >= 3.6
 - PyQt5 >= 5.10
 
+Install requirements on **MacOS** or **Windows**:
+
+    python3 -m pip install PyQt5
+
 Install requirements on **Ubuntu**:
 
     sudo apt install python3-pyqt5.qtwebengine
