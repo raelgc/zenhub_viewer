@@ -1,6 +1,6 @@
 # ZenHub Viewer
 
-ZenHub Viewer is a non official desktop viewer for [ZenHub](https://www.zenhub.com/).
+ZenHub Viewer is a non official desktop client for [ZenHub](https://www.zenhub.com/).
 
 ZenHub is a team collaboration tool build directly into GitHub.
 
