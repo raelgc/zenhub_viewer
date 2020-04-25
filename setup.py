@@ -4,11 +4,11 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 def _data_files():
-  yield os.path.join('share', 'doc', 'zenhub_viewer'), \
+  yield os.path.join(os.sep, 'usr', 'share', 'doc', 'zenhub_viewer'), \
     ['LICENSE', 'README.md']
-  yield os.path.join('share', 'applications'), \
+  yield os.path.join(os.sep, 'usr', 'share', 'applications'), \
     glob.glob(os.path.join('share', '*.desktop'))
-  yield os.path.join('share', 'pixmaps'), \
+  yield os.path.join(os.sep, 'usr', 'share', 'pixmaps'), \
     glob.glob(os.path.join('zenhub_viewer', 'resources', 'zenhub_viewer.png'))
 
 setuptools.setup(
