@@ -8,13 +8,16 @@ class WebEnginePage(QWebEnginePage):
     tabs = self.parent().parent().parent()
     host = qUrl.host()
     url = qUrl.toString()
+    print(url)
+    if host in Resources.BLACK_LIST:
+      return False
     if requestType == self.NavigationTypeLinkClicked and Resources.isWorkspace(url):
       tabs.addNewTab(qUrl)
       return False
     if host.endswith(Resources.HOST) or Resources.isAuth(url) or host in Resources.WHITE_LIST:
       return True
     QDesktopServices.openUrl(qUrl)
-    return False
+    return True
 
   def createWindow(self, windowType):
     return WebEnginePage(self.parent())
