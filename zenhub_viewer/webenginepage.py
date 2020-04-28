@@ -17,7 +17,7 @@ class WebEnginePage(QWebEnginePage):
     if host.endswith(Resources.HOST) or Resources.isAuth(url) or host in Resources.WHITE_LIST:
       return True
     QDesktopServices.openUrl(qUrl)
-    return True
+    return False
 
   def createWindow(self, windowType):
     return WebEnginePage(self.parent())
