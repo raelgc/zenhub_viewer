@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import sys
+import signal, sys
 from PyQt5.QtCore import QUrl
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QIcon
@@ -19,6 +19,7 @@ class MainWindow(QMainWindow):
     self.showMaximized()
 
 def main():
+  signal.signal(signal.SIGINT, signal.SIG_DFL)
   app = QApplication(sys.argv)
   window = MainWindow()
   window.show()
