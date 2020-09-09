@@ -12,16 +12,8 @@ class TabWidget(QTabWidget):
 
   def addNewTab(self, qUrl, label='Loading...', icon = QIcon()):
     browser = WebEngineView(self)
-    browser.titleChanged.connect(lambda title: self.titleChanged(browser, title))
     browser.setUrl(qUrl)
     if self.addTab(browser, icon, label) == 0:
       tabBar = self.tabBar()
       tabBar.tabButton(0, QTabBar.RightSide).deleteLater()
       tabBar.setTabButton(0, QTabBar.RightSide, None)
-
-  def titleChanged(self, browser, title):
-    url = browser.page().url().toString()
-    if '/issues/' in url:
-      issue = url.split('/')[-1]
-      title = f'#{issue} - {title}'
-    self.setTabText(self.indexOf(browser), title[:40])
